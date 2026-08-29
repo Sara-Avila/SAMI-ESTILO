@@ -92,7 +92,7 @@ const btnRegistro = document.querySelector(".btn-registro");
 
 btnRegistro.addEventListener("click", () => {
 
-    window.location.href = "/index.html";
+    window.location.href = "/html/index.html";
 
 });
 
@@ -105,6 +105,6 @@ const btnLogin = document.querySelector(".btn-login");
 
 btnLogin.addEventListener("click", () => {
 
-    window.location.href = "/index.html";
+    window.location.href = "/html/index.html";
 
 });
