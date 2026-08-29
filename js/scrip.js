@@ -1,4 +1,5 @@
 // CONTENEDORES
+const inicio_sesion = document.getElementById('inicio_sesion');
 const portada = document.querySelector(".portada");
 const registrarse = document.querySelector(".registrarse");
 const iniciarSesion = document.querySelector(".iniciar-sesion");
@@ -200,4 +201,30 @@ enlaces[1].addEventListener("click", (event) => {
     iniciarSesion.style.display = "none";
     registrarse.style.display = "block";
 
+});
+
+
+
+inicio_sesion.addEventListener('submit', async function(evento) {
+  evento.preventDefault(); 
+  
+  // 1. Tomamos lo que Pepa escribió
+  const correologin = document.getElementById('correologin').value;
+  const contraseñalogin = document.getElementById('contraseñalogin').value;
+
+  // 2. Llamamos al Mesero (Backend) en el puerto 3000
+  try {
+    const respuesta = await fetch('http://localhost:3000/api/inicio_sesion', {
+      method: 'POST', // Queremos "enviar" información
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ correo: correologin, contraseña: contraseñalogin })
+    });
+
+    if (respuesta.ok) {
+      alert('¡se inicio sesion !');
+      inicio_sesion.reset(); // Limpiamos el formulario
+    }
+  } catch (error) {
+    alert('El Mesero no responde. Revisa si el servidor está encendido.');
+  }
 });

@@ -1,0 +1,27 @@
+{
+  "name": "sami",
+  "version": "1.0.0",
+  "description": "Proyecto web desarrollado para *SAMI ESTILO*, enfocado en crear una interfaz sencilla y moderna para una tienda de moda.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikolfernanda/SAMI-ESTILO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Nikolfernanda/SAMI-ESTILO/issues"
+  },
+  "homepage": "https://github.com/Nikolfernanda/SAMI-ESTILO#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.24.2"
+  }
+}

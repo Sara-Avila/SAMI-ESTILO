@@ -247,6 +247,7 @@ button:hover {
     background-color: #f3e4bc;
     transform: scale(1.02);
 }
+
 /* Diseño para celulares */
 
 @media screen and (max-width: 450px) {
